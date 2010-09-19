@@ -98,7 +98,7 @@ def burnFinished(rc):
               'for installing the software you burned, contact Zyxware or ilug-tvm.'
         log.logMessage(MBURNOK, "", "")
     else:
-        msg = 'We apologise for the inconvenience, please contact Zyxware Technologies or Trivandrum GNU/Linux Users Group for assistance.\n'
+        msg = 'We apologise for the inconvenience, please contact Zyxware Technologies or Thiruvananthapuram GNU/Linux Users Group for assistance.\n'
         log.logMessage(MBURNFAILED, "", "")
     
     label = gtk.Label('<span size="14000">' + msg + '</span>')
