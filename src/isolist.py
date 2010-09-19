@@ -19,8 +19,6 @@ class Iso:
         self.type = ''    
 
 def populateIsoList():
-    
-    
     numIsos = 0          
     isoList = []
     
