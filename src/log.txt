@@ -210,3 +210,39 @@
 2010/9/8/0/34/49	TOASTERSTART		
 2010/9/8/0/34/51	ISOINFO	'Ubuntu 10.04 Live (CD)'	'/home/zyxware/freedomtoaster/src/iso/ubuntu-10.04-desktop-i386.iso'
 2010/9/8/0/34/53	MORESTUFF		
+2010/9/19/17/21/58	TOASTERSTART		
+2010/9/19/17/22/2	MORESTUFF		
+2010/9/19/17/22/4	MORESTUFF		
+2010/9/19/17/22/6	MORESTUFF		
+2010/9/19/17/22/8	MORESTUFF		
+2010/9/19/17/22/17	TOASTEREND		
+2010/9/19/17/23/22	TOASTERSTART		
+2010/9/19/17/23/25	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/19/17/23/38	WODIM: wodim: Operation not permitted. Warning: Cannot raise RLIMIT_MEMLOCK limits.
+2010/9/19/17/23/38	WODIM: scsidev: '/dev/scd0'
+2010/9/19/17/23/38	WODIM: devname: '/dev/scd0'
+2010/9/19/17/23/38	WODIM: scsibus: -2 target: -2 lun: -2
+2010/9/19/17/23/38	WODIM: wodim: No such file or directory. 
+2010/9/19/17/23/38	WODIM: Cannot open SCSI driver!
+2010/9/19/17/23/38	WODIM: For possible targets try 'wodim --devices' or 'wodim -scanbus'.
+2010/9/19/17/23/38	WODIM: For possible transport specifiers try 'wodim dev=help'.
+2010/9/19/17/23/38	WODIM: For IDE/ATAPI devices configuration, see the file README.ATAPI.setup from
+2010/9/19/17/23/38	WODIM: the wodim documentation.
+2010/9/19/17/23/38	WODIM: TOC Type: 1 = CD-ROM
+2010/9/19/17/23/38	BURNFAILED		
+2010/9/19/17/23/47	TOASTEREND		
+2010/9/19 17:38:37	TOASTERSTART		
+2010/9/19 17:38:38	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/19 17:38:49	WODIM: wodim: Operation not permitted. Warning: Cannot raise RLIMIT_MEMLOCK limits.
+2010/9/19 17:38:49	WODIM: scsidev: '/dev/scd0'
+2010/9/19 17:38:49	WODIM: devname: '/dev/scd0'
+2010/9/19 17:38:49	WODIM: scsibus: -2 target: -2 lun: -2
+2010/9/19 17:38:49	WODIM: wodim: No such file or directory. 
+2010/9/19 17:38:49	WODIM: Cannot open SCSI driver!
+2010/9/19 17:38:49	WODIM: For possible targets try 'wodim --devices' or 'wodim -scanbus'.
+2010/9/19 17:38:49	WODIM: For possible transport specifiers try 'wodim dev=help'.
+2010/9/19 17:38:49	WODIM: For IDE/ATAPI devices configuration, see the file README.ATAPI.setup from
+2010/9/19 17:38:49	WODIM: the wodim documentation.
+2010/9/19 17:38:49	WODIM: TOC Type: 1 = CD-ROM
+2010/9/19 17:38:49	BURNFAILED		
+2010/9/19 17:38:58	TOASTEREND		

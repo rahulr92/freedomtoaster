@@ -1,1 +1,6 @@
 *.pyc
+*.iso
+*.png
+*.xml
+src/log.txt
+src/globals.py

@@ -3,7 +3,7 @@ RESOLUTION = 1024,768
 
 # Directory containing the xml files describing the available isos.
 # (these can be symbolic links to another directory)
-HOMEDIR = '/home/zyxware/freedomtoaster'
+HOMEDIR = '/home/aneesh/Projects/freedomtoaster'
 
 ISOLISTDIR = HOMEDIR + '/src/isolist/'
 # Where on the filesystem the ISOs are
