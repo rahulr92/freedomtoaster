@@ -142,24 +142,24 @@ class ToasterMain:
 # XXX: cherry@zyx.in : Sorry, this is done in a hurry, I don't know how to import eject
 #      from burn.py
 
-def eject():
-    command = 'eject', DEVICE
-    subprocess.Popen(command)
+# XXX: aneesh.nl@gmail.com
+# Try this: I have no way to check, because I don't have an optical 
+# drive.
 
-def tray_close():
-    command = 'eject', '-t', DEVICE
-    subprocess.Popen(command, 0, "eject", subprocess.PIPE, subprocess.PIPE, subprocess.STDOUT)
+from burn import eject, tray_close
 
+#def eject():
+#    command = 'eject', DEVICE
+#    subprocess.Popen(command)
 
-
-
-
+#def tray_close():
+#    command = 'eject', '-t', DEVICE
+#    subprocess.Popen(command, 0, "eject", subprocess.PIPE, subprocess.PIPE, subprocess.STDOUT)
 
 
 #subprocess.Popen(command)
 
    
-
 def highlightbutton(button,event):
     button.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#c3e5ff"))
     
