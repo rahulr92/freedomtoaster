@@ -145,8 +145,9 @@ class ToasterMain:
 # XXX: aneesh.nl@gmail.com
 # Try this: I have no way to check, because I don't have an optical 
 # drive.
+# Fix : Sorry, previous one not possible, becuse burn.py also import main
 
-from burn import eject, tray_close
+from eject import eject, tray_close
 
 #def eject():
 #    command = 'eject', DEVICE
