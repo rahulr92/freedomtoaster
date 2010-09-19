@@ -1,8 +1,11 @@
+Immediate Enchancements
+-----------------------
+
 - find a way to get rid of focus border on buttons
 - try to give the window a background (must be a light colour, lest fingerprints become a lot more visible)
 - remove 'insert disk and', instead add a check + a new window asking for disk
 - make obvious that buttons are clickable (maybe background colour/picture)
--freedos?
+- freedos?
 - move mouse pointer to a corner after an operation starts/ends so it doesn't hightlight a button
 - at least some kind of trivial exception handling to return to the main window or something
 
@@ -10,3 +13,11 @@
 - list of available software on the website
 - picture and address on the main page
 - make a util folder with xfce start scripts
+
+Future
+------
+
+- Include the facility to make USB bootable drives, More eco friendly.
+- Include the facility to write multiple ISO to DVDs, or copy to pen drive.
+- Setup network boot, so that the user can install from network
+- Add a GUI to add the XML file and the logo of a new distro.
