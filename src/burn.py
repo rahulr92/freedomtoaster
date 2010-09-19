@@ -12,6 +12,7 @@ import datetime
 from globals import *
 import log
 import main
+import eject
 
 def burn(button, filename):
     global GBLprocess
@@ -197,15 +198,6 @@ def unhighlightbutton(button,event):
 def closeWindowAndEjectCbk(button, window):
     closeWindowAndEject(window)
     
-def eject():
-    command = 'eject', DEVICE
-    subprocess.Popen(command)
-
-def tray_close():
-    command = 'eject', '-t', DEVICE
-    subprocess.Popen(command, 0, "eject", subprocess.PIPE, subprocess.PIPE, subprocess.STDOUT)
-
-
 def showProgressWindow():
     global progressWindow
     global timeLeftLbl
