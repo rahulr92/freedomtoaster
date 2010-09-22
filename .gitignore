@@ -4,3 +4,4 @@
 *.xml
 src/log.txt
 src/globals.py
+logarchive/*
