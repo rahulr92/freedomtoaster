@@ -30,7 +30,6 @@ def populateIsoList():
         #~ print filename
         # find xml files
         if re.search('\.xml$', filename):
-            
             # data about this iso will be stored in here:
             iso = Iso()
             
@@ -40,15 +39,11 @@ def populateIsoList():
             
             for node in doc.documentElement.childNodes:
                 if node.nodeType == Node.ELEMENT_NODE:
-                    
-                    #~ print node.nodeName + ' -> ' + node.firstChild.nodeValue
-                    
                     if node.firstChild:
                         nodeValue = node.firstChild.nodeValue
                     else:
                         # this happens for an empty tag
                         continue
-                    
                     if node.nodeName == 'displayname':
                         iso.displayname = nodeValue
                     elif node.nodeName == 'category':
@@ -66,10 +61,8 @@ def populateIsoList():
                     
             isoList.append(iso)
             numIsos += 1
-        
         if numIsos >= 20:
             break
-            
     return isoList
 
 def retnumisos():
