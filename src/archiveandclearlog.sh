@@ -8,6 +8,6 @@ then
   exit
 fi
 
-cp $LOGFILENAME logarchive/`date +%Y-%m-%d-%H-%M-%S`.log
+cp $LOGFILENAME logarchive/`date +%Y-%m-%d-%H:%M:%S`.log
 cat $LOGFILENAME >> logarchive/cumulative.log
 rm $LOGFILENAME
