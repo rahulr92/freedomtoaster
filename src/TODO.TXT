@@ -21,3 +21,4 @@ Future
 - Include the facility to write multiple ISO to DVDs, or copy to pen drive.
 - Setup network boot, so that the user can install from network
 - Add a GUI to add the XML file and the logo of a new distro.
+- Get the details of distro automaticaly from distro watch
