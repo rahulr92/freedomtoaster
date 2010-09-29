@@ -13,3 +13,65 @@
 2010/9/23 22:23:49	BURNFAILED		
 2010/9/23 22:26:34	TOASTERSTART		
 2010/9/23 22:26:45	TOASTERSTART		
+2010/9/29 11:9:34	TOASTERSTART		
+2010/9/29 11:9:38	MORESTUFF		
+2010/9/29 11:10:51	TOASTERSTART		
+2010/9/29 11:10:56	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:11:1	MORESTUFF		
+2010/9/29 11:11:7	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:11:15	TOASTEREND		
+2010/9/29 11:14:29	TOASTERSTART		
+2010/9/29 11:14:30	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:14:35	WODIM: wodim: Operation not permitted. Warning: Cannot raise RLIMIT_MEMLOCK limits.
+2010/9/29 11:14:35	WODIM: scsidev: '/dev/scd0'
+2010/9/29 11:14:35	WODIM: devname: '/dev/scd0'
+2010/9/29 11:14:35	WODIM: scsibus: -2 target: -2 lun: -2
+2010/9/29 11:14:35	WODIM: wodim: No such file or directory. 
+2010/9/29 11:14:35	WODIM: Cannot open SCSI driver!
+2010/9/29 11:14:35	WODIM: For possible targets try 'wodim --devices' or 'wodim -scanbus'.
+2010/9/29 11:14:35	WODIM: For possible transport specifiers try 'wodim dev=help'.
+2010/9/29 11:14:35	WODIM: For IDE/ATAPI devices configuration, see the file README.ATAPI.setup from
+2010/9/29 11:14:35	WODIM: the wodim documentation.
+2010/9/29 11:14:35	WODIM: TOC Type: 1 = CD-ROM
+2010/9/29 11:14:35	BURNFAILED		
+2010/9/29 11:14:40	MORESTUFF		
+2010/9/29 11:14:44	TOASTEREND		
+2010/9/29 11:15:47	TOASTERSTART		
+2010/9/29 11:15:48	MORESTUFF		
+2010/9/29 11:15:56	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:16:2	WODIM: wodim: Operation not permitted. Warning: Cannot raise RLIMIT_MEMLOCK limits.
+2010/9/29 11:16:2	WODIM: scsidev: '/dev/scd0'
+2010/9/29 11:16:2	WODIM: devname: '/dev/scd0'
+2010/9/29 11:16:2	WODIM: scsibus: -2 target: -2 lun: -2
+2010/9/29 11:16:2	WODIM: wodim: No such file or directory. 
+2010/9/29 11:16:2	WODIM: Cannot open SCSI driver!
+2010/9/29 11:16:2	WODIM: For possible targets try 'wodim --devices' or 'wodim -scanbus'.
+2010/9/29 11:16:2	WODIM: For possible transport specifiers try 'wodim dev=help'.
+2010/9/29 11:16:2	WODIM: For IDE/ATAPI devices configuration, see the file README.ATAPI.setup from
+2010/9/29 11:16:2	WODIM: the wodim documentation.
+2010/9/29 11:16:2	WODIM: TOC Type: 1 = CD-ROM
+2010/9/29 11:16:2	BURNFAILED		
+2010/9/29 11:16:7	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:16:12	MORESTUFF		
+2010/9/29 11:16:15	TOASTEREND		
+2010/9/29 11:17:11	TOASTERSTART		
+2010/9/29 11:17:13	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:17:19	TOASTEREND		
+2010/9/29 11:17:26	TOASTERSTART		
+2010/9/29 11:17:29	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:17:32	TOASTEREND		
+2010/9/29 11:17:46	TOASTERSTART		
+2010/9/29 11:17:47	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:17:50	TOASTEREND		
+2010/9/29 11:20:46	TOASTERSTART		
+2010/9/29 11:20:48	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:20:52	TOASTEREND		
+2010/9/29 11:22:22	TOASTERSTART		
+2010/9/29 11:22:25	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:22:29	TOASTEREND		
+2010/9/29 11:22:33	TOASTERSTART		
+2010/9/29 11:22:37	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:22:45	TOASTEREND		
+2010/9/29 11:27:21	TOASTERSTART		
+2010/9/29 11:27:22	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
+2010/9/29 11:27:25	TOASTEREND		
