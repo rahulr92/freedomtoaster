@@ -23,11 +23,9 @@ class ToasterMain:
         gtk.main_quit()
     
     def __init__(self):
-	
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.connect("destroy", self.destroy)
         self.window.set_default_size(RESOLUTION[0], RESOLUTION[1])
-	
 
         def disable_cursor():
             # Make the cursor invisible
@@ -38,37 +36,34 @@ class ToasterMain:
             cursor = gtk.gdk.Cursor(pixmap, pixmap, color, color, 0, 0)
             gdkwin.set_cursor(cursor)
 
-
-	# We run at fullscreen
-	self.window.fullscreen()
-
+        # We run at fullscreen
+        self.window.fullscreen()
         # disable_cursor()
-
-	#Show the window	
+        #Show the window
         self.window.show()
         
-	tray_close()
+        tray_close()
         mainvbox = gtk.VBox(False, 20)
         self.window.add(mainvbox)
         mainvbox.show()
         
         vscrollbar = gtk.VScrollbar(adjustment=None)
 
-	#gap
+        #gap
         fillerhbox = gtk.HBox(True, 0)
         fillerhbox.set_size_request(-1,20)
         fillerhbox.show()
         mainvbox.pack_start(fillerhbox,False,False)
 
-        # top middle (title)
-        titleLbl = gtk.Label('<span size="33000"><span color="#2c089c"><b><span face="good times">' + 'Zyx' + '</span></b></span></span>' + '<span size="33000" color="#8634e0" face="good times"><b>' + 'ware' + '</b></span>')
-	mainlbl = gtk.Label('<span size="37000"><span face="good times"><b>' + 'FREEDOM TOASTER' + '</b></span></span>')
-	mainlbl.set_use_markup(True)
-	mainlbl.show()
-        titleLbl.set_use_markup(True)
-        mainvbox.pack_start(titleLbl, False, False)
-	mainvbox.pack_start(mainlbl, False, False)
-        titleLbl.show()
+        # Title
+        logo = gtk.Image()
+        logo.set_from_file("logo.png")
+        mainlbl = gtk.Label('<span size="37000"><span face="good times"><b>' + 'FREEDOM TOASTER' + '</b></span></span>')
+        mainlbl.set_use_markup(True)
+        mainlbl.show()
+        mainvbox.pack_start(logo, False, False)
+        mainvbox.pack_start(mainlbl, False, False)
+        logo.show()
         directionsLbl = gtk.Label('<span size="12000">' + 
                                   "Choose the distro you want using the navigational keys and press enter" + 
                                   '</span>')
@@ -92,7 +87,7 @@ class ToasterMain:
             # button for this software
             button = gtk.Button()
             button.connect("focus-in-event",highlightbutton)
- 	    button.connect("key-release-event",highlightbutton)
+            button.connect("key-release-event",highlightbutton)
             button.connect("key-press-event",unhighlightbutton)
             button.connect("clicked", readyToBurnScreen, iso)
             hbox.pack_start(button, True, True)
@@ -115,8 +110,8 @@ class ToasterMain:
         # More stuff button
         button = gtk.Button()
         button.connect("clicked", moreStuff)
-	button.connect("focus-in-event",highlightbutton)
-	button.connect("key-release-event",highlightbutton)	
+        button.connect("focus-in-event",highlightbutton)
+        button.connect("key-release-event",highlightbutton)	
         button.connect("key-press-event",unhighlightbutton)
         mainvbox.pack_start(button, True, True)
         button.show()
@@ -134,7 +129,7 @@ class ToasterMain:
         # toaster_display.warp_pointer(toaster_screen,-1,-1)
         #toaster_screen.get_width()+2,toaster_screen.get_height()+2)
 
-	log.logMessage(MTOASTERSTART, "", "")
+        log.logMessage(MTOASTERSTART, "", "")
        
     def main(self):
         gtk.main()
@@ -143,31 +138,14 @@ class ToasterMain:
 #      from burn.py
 
 # XXX: aneesh.nl@gmail.com
-# Try this: I have no way to check, because I don't have an optical 
-# drive.
-# Fix : Sorry, previous one not possible, becuse burn.py also import main
-
+# Now working.
 from eject import eject, tray_close
-
-#def eject():
-#    command = 'eject', DEVICE
-#    subprocess.Popen(command)
-
-#def tray_close():
-#    command = 'eject', '-t', DEVICE
-#    subprocess.Popen(command, 0, "eject", subprocess.PIPE, subprocess.PIPE, subprocess.STDOUT)
-
-
-#subprocess.Popen(command)
-
    
 def highlightbutton(button,event):
     button.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#c3e5ff"))
     
-    
 def unhighlightbutton(button,event):
     button.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#EDECEB"))
-    
     
 def populateButton(button, iso, buttonTextWidth):
     hbox = gtk.HBox(False, 5)
@@ -305,7 +283,6 @@ def readyToBurnScreen(button, iso):
     fillerhbox.show()
 
     eject()
- 
     # close window after timeout passes
     gobject.timeout_add(CLOSEWINDOWTIMEOUT, window.destroy)
 
@@ -337,24 +314,15 @@ def moreStuff(button):
     fillerhbox.show()
     vbox.pack_start(fillerhbox,False,False)
 
-    # XXX: Anish A <aneesh.nl@gmail.com>
-	# Is it a good idea to hardcode zyxware ?
-	# A link to external file or something can be done to make toaster software
-	# more general
-    titleLbl = gtk.Label('<span size="33000"><span color="#2c089c"><b><span face="good times">' + 'Zyx' + '</span></b></span></span>' + '<span size="33000" color="#8634e0" face="good times"><b>' + 'ware' + '</b></span>')
+    # Title
+    logo = gtk.Image()
+    logo.set_from_file("logo.png")
     mainlbl = gtk.Label('<span size="37000"><span face="good times"><b>' + 'FREEDOM TOASTER' + '</b></span></span>')
     mainlbl.set_use_markup(True)
     mainlbl.show()
-    titleLbl.set_use_markup(True)    
-    vbox.pack_start(titleLbl, False, False)
+    vbox.pack_start(logo, False, False)
     vbox.pack_start(mainlbl, False, False)
-    titleLbl.show()
-    
-    # padding on the top
-    fillerhbox = gtk.HBox(False, 5)
-    fillerhbox.set_size_request(-1, 5)
-    vbox.pack_start(fillerhbox, False, False)
-    #fillerhbox.show()
+    logo.show()
     
     # listbox control with list of isos
     listStore = gtk.ListStore(str, gtk.gdk.Pixbuf)
@@ -384,11 +352,6 @@ def moreStuff(button):
     vbox.pack_start(scrolledwindow, True, True)
     scrolledwindow.show()
     scrolledwindow.add(listBox)
-    #hbox = gtk.HBox(False, 5)
-    #hbox.set_size_request(-1, 200)
-    #hbox.pack_start(listBox, False, False)
-    #vbox.pack_start(hbox, True, True)
-    #hbox.show()
     listBox.show()
 
     # padding on the bottom
@@ -397,18 +360,6 @@ def moreStuff(button):
     vbox.pack_start(fillerhbox, False, False)
     fillerhbox.show()
 
-    # back button
-    #backbutton = gtk.Button()
-    #backbutton.connect("clicked", closeWindowCbk, window)
-    #backbutton.set_size_request(-1, 100)
-    #vbox.pack_start(backbutton, False, False)
-    #backbutton.show()
-    
-    # back button contents
-    #label = gtk.Label('<span size="24000"><b>' + 'Press here to go to the main menu' + '</b></span>')
-    #label.set_use_markup(True)
-    #label.show()
-    #backbutton.add(label)
 
 # The callback function: 
 # focusme is the widget that will be focused
