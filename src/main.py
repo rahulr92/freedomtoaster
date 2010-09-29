@@ -202,7 +202,7 @@ def readyToBurnScreen(button, iso):
     # Make sure the button release event gets through
     # This is for the "button-release-event callback below
     window.add_events(gtk.gdk.BUTTON_RELEASE_MASK)
-
+    window.fullscreen()
     window.show()
     window.connect("key-press-event",on_key_press)
     window.connect("button-release-event", on_button_release)
@@ -323,6 +323,7 @@ def moreStuff(button):
     window.connect("key-press-event",on_key_press)
     window.connect("button-release-event", on_button_release)
     window.set_flags(gtk.CAN_FOCUS)
+    window.fullscreen()
     window.show()
     
     # main container that contains the control
@@ -464,6 +465,7 @@ def helpScreen(button):
     
     window = gtk.Window(gtk.WINDOW_TOPLEVEL)
     window.set_default_size(RESOLUTION[0], RESOLUTION[1])
+    window.fullscreen()
     window.show()
     
     hbox = gtk.HBox(False, 5)
