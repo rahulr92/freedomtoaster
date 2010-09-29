@@ -2,6 +2,6 @@
 *.iso
 *.png
 *.xml
-src/log.txt
-src/globals.py
-logarchive/*
+log.txt
+globals.py
+run.sh
