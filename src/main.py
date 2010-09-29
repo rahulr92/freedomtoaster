@@ -335,7 +335,11 @@ def moreStuff(button):
     fillerhbox.set_size_request(-1,20)
     fillerhbox.show()
     vbox.pack_start(fillerhbox,False,False)
-	
+
+    # XXX: Anish A <aneesh.nl@gmail.com>
+	# Is it a good idea to hardcode zyxware ?
+	# A link to external file or something can be done to make toaster software
+	# more general
     titleLbl = gtk.Label('<span size="33000"><span color="#2c089c"><b><span face="good times">' + 'Zyx' + '</span></b></span></span>' + '<span size="33000" color="#8634e0" face="good times"><b>' + 'ware' + '</b></span>')
     mainlbl = gtk.Label('<span size="37000"><span face="good times"><b>' + 'FREEDOM TOASTER' + '</b></span></span>')
     mainlbl.set_use_markup(True)
@@ -419,7 +423,7 @@ def on_key_press(window,event):
     if gtk.gdk.keyval_name(event.keyval) == "Escape":
         abort_for_escape(window)
 
-# XXX: <cherry@zyx.in> -> Blindly following the on_key_press() template here;        
+# XXX: <cherry@zyx.in> -> Blindly following the on_key_press() template here;    
 def on_button_release(window, event):
     # Check for right click
     if event.button == 3:
@@ -445,9 +449,6 @@ def onlistBoxSelect(treeview, path, view_column):
     for iso in morestufflist:
         if iso.displayname == value1[0]:
             readyToBurnScreen(None, iso)
-            
-    
-    
 
 def showMessage(string):
     message = gtk.MessageDialog(None, gtk.DIALOG_MODAL, gtk.MESSAGE_INFO, gtk.BUTTONS_NONE, string)
@@ -456,7 +457,8 @@ def showMessage(string):
     if resp == gtk.RESPONSE_CLOSE:
         message.destroy()
 
-
+# XXX: Anish A <aneesh.nl@gmail.com>
+# Why this function? It is not called anywhere.
 def helpScreen(button):
     log.logMessage(MHELPSCREEN, "", "")
     

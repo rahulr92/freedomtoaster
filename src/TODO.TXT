@@ -1,6 +1,5 @@
 Immediate Enchancements
 -----------------------
-
 - find a way to get rid of focus border on buttons
 - try to give the window a background (must be a light colour, lest fingerprints become a lot more visible)
 - remove 'insert disk and', instead add a check + a new window asking for disk
@@ -22,3 +21,8 @@ Future
 - Setup network boot, so that the user can install from network
 - Add a GUI to add the XML file and the logo of a new distro.
 - Get the details of distro automaticaly from distro watch
+
+Done
+----
+
+-

@@ -12,7 +12,7 @@ import datetime
 from globals import *
 import log
 import main
-import eject
+from eject import *
 
 def burn(button, filename):
     global GBLprocess
