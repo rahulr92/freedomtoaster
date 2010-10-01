@@ -53,6 +53,7 @@ def burnFinished(rc):
     
     window = gtk.Window(gtk.WINDOW_TOPLEVEL)
     window.set_default_size(RESOLUTION[0], RESOLUTION[1])
+    window.fullscreen()
     window.show()
     vbox = gtk.VBox(False, 5)
     window.add(vbox)
@@ -64,14 +65,14 @@ def burnFinished(rc):
     fillerhbox.show()
     vbox.pack_start(fillerhbox,False,False)
 
-    titleLbl = gtk.Label('<span size="33000"><span color="#2c089c"><b><span face="good times">' + 'Zyx' + '</span></b></span></span>' + '<span size="33000" color="#8634e0" face="good times"><b>' + 'ware' + '</b></span>')
+    logo = gtk.Image()
+    logo.set_from_file("logo.png")
     mainlbl = gtk.Label('<span size="37000"><span face="good times"><b>' + 'FREEDOM TOASTER' + '</b></span></span>')
     mainlbl.set_use_markup(True)
     mainlbl.show()
-    titleLbl.set_use_markup(True)
-    vbox.pack_start(titleLbl, False, False)
+    vbox.pack_start(logo, False, False)
     vbox.pack_start(mainlbl, False, False)
-    titleLbl.show()
+    logo.show()
     window.connect("key-press-event",on_key_press)
     window.set_destroy_with_parent(True)
     fillervbox = gtk.VBox(False, 5)
@@ -96,10 +97,10 @@ def burnFinished(rc):
     
     if rc == 0:
         msg = 'Thank you for using the freedom toaster. In case you need any help\n' + \
-              'for installing the software you burned, contact Zyxware or ilug-tvm.'
+              'for installing the software you burned, contact Zyxware or FSUG-TVPM.'
         log.logMessage(MBURNOK, "", "")
     else:
-        msg = 'We apologise for the inconvenience, please contact Zyxware Technologies or Thiruvananthapuram GNU/Linux Users Group for assistance.\n'
+        msg = 'We apologise for the inconvenience, please contact Zyxware Technologies or Thiruvananthapuram Free Software Users Group for assistance.\n'
         log.logMessage(MBURNFAILED, "", "")
     
     label = gtk.Label('<span size="14000">' + msg + '</span>')
@@ -124,7 +125,7 @@ def burnFinished(rc):
     fillervbox.set_size_request(-1, 20)
     fillervbox.show()
     
-    label = gtk.Label('<span size="18000">' + 'http://freedomtoaster.in' + '</span>')
+    label = gtk.Label('<span size="18000">' + 'www.freedomtoaster.in' + '</span>')
     label.set_use_markup(True)
     label.show()
     vbox.pack_start(label, False, False)
@@ -204,6 +205,7 @@ def showProgressWindow():
     
     progressWindow = gtk.Window(gtk.WINDOW_TOPLEVEL)
     progressWindow.set_default_size(RESOLUTION[0], RESOLUTION[1])
+    progressWindow.fullscreen()
     progressWindow.show()
     
     vbox = gtk.VBox(False, 5)
