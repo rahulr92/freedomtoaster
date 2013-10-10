@@ -30,7 +30,7 @@ def populateIsoList():
     print filelist
     # for every file in the directory
     for filename in filelist:
-	 iso=Iso()
+	 iso=Iso()			#This is almost similar to what you will find in isolist.py. If you are looking for comments, you'll find them in isolist.py
          image_name=re.split('-|_|[0-9]*',filename,1)[0]+'.png'
          desc_file_name=re.split('-|_|[0-9]*',filename,1)[0]+'.txt'
          #print image_name,desc_file_name
