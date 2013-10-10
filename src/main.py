@@ -154,7 +154,10 @@ def populateButton(button, iso, buttonTextWidth):
     
     # picture
     image = gtk.Image()
-    image.set_from_file(iso.picture)
+    try:
+      image.set_from_file(iso.picture)
+    except:
+      image.set_from_file(HOMEDIR+'/src/images/default.png')
     image.show()
     hbox.pack_start(image, False, False)
     
@@ -236,7 +239,8 @@ def readyToBurnScreen(button, iso):
     hbox.pack_start(image, True, True)
     
     # iso description
-    label = gtk.Label('<span size="12000">' + iso.longdescription + '</span>')
+    
+    label = gtk.Label('<span size="12000">' + iso.longdescription[0] + '</span>')
     label.set_use_markup(True)
     label.set_line_wrap(True)
     label.set_size_request(RESOLUTION[0] - 400, -1)
@@ -327,8 +331,10 @@ def moreStuff(button):
     # listbox control with list of isos
     listStore = gtk.ListStore(str, gtk.gdk.Pixbuf)
     for iso in morestufflist:
-        listStore.append([iso.displayname, gtk.gdk.pixbuf_new_from_file(iso.picture)])
-        
+	try:
+	  listStore.append([iso.displayname, gtk.gdk.pixbuf_new_from_file(iso.picture)])
+        except:
+	  listStore.append([iso.displayname, gtk.gdk.pixbuf_new_from_file(HOMEDIR+'/src/images/default.png')])
     listColumn = gtk.TreeViewColumn()
     iconRenderer = gtk.CellRendererPixbuf()
     #iconRenderer.height = 125

@@ -75,3 +75,5 @@
 2010/9/29 11:27:21	TOASTERSTART		
 2010/9/29 11:27:22	ISOINFO	'Arch Linux 2009.08 x86 (CD)'	'/home/aneesh/Projects/freedomtoaster/src/iso/archlinux_2009.08_core-i686.iso'
 2010/9/29 11:27:25	TOASTEREND		
+2013/10/10 22:4:0	TOASTERSTART		
+2013/10/10 22:4:2	TOASTEREND		

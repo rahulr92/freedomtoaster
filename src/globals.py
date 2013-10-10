@@ -3,7 +3,7 @@ RESOLUTION = 1024,768
 
 # Directory containing the xml files describing the available isos.
 # (these can be symbolic links to another directory)
-HOMEDIR = '/home/aneesh/Projects/freedomtoaster'
+HOMEDIR = '/home/kevin/freedomtoaster'
 
 ISOLISTDIR = HOMEDIR + '/src/isolist/'
 # Where on the filesystem the ISOs are
@@ -14,7 +14,7 @@ HOMESCREEN = HOMEDIR + '/src/homescreen/'
 
 
 # Where on the filesystem the images (to be used inside buttons) are
-ISOIMAGEPATH = ISOPATH
+ISOIMAGEPATH = HOMEDIR+'/src/images/'
 # The file with the help, including path
 HELPFILE = HOMEDIR + "/src/help.txt"
 
@@ -29,7 +29,7 @@ BURNINGPROGRAM = 'wodim'
 
 # Recorder
 #DEVICE = '/dev/hda'
-DEVICE = '/dev/scd0'
+DEVICE = '/dev/cdrom'
 #DEVICE = '/dev/sr0'
 
 # How long a window like 'iso info' or 'help' will stay up 
