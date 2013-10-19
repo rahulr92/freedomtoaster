@@ -2,11 +2,11 @@
 
 import gtk
 import gobject
-
+import usb
 from globals import *
 import sys
 sys.path.append("/usr/lib/python%s/site-packages/oldxml"% sys.version[:3])
-
+import os
 import subprocess
 import isolist
 import burn
@@ -26,7 +26,7 @@ class ToasterMain:
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.connect("destroy", self.destroy)
         self.window.set_default_size(RESOLUTION[0], RESOLUTION[1])
-
+	os.system('pwd')
         def disable_cursor():
             # Make the cursor invisible
             # Find the root gdk window and tweak its cursor.
@@ -268,25 +268,39 @@ def readyToBurnScreen(button, iso):
     fillerhbox.show()
     
     button = gtk.Button()
+    button_usb=gtk.Button()
     button.connect("clicked", burn.burn, iso.filename)
     button.connect("focus-in-event",highlightbutton)
     button.connect("key-press-event",highlightbutton)
+    
+    button_usb.connect("clicked",usb.create_usb,iso.filename)
+    button_usb.connect("focus-in-event",highlightbutton)
+    button_usb.connect("key-press-event",highlightbutton)
+    
     button.set_size_request(-1, 100)
+    button_usb.set_size_request(-1,100)
     vbox.pack_start(button, False, False)
+    vbox.pack_start(button_usb,False,False)
     button.show()
+    button_usb.show()
     label = gtk.Label('<span size="24000"><b>' + 'Insert disk and press ENTER to burn' + '</b></span>')
     label.set_use_markup(True)
     label.show()
+    label_usb=gtk.Label('<span size="24000"><b>' + 'Press to create a bootable USB' + '</b></span>')
+    label_usb.set_use_markup(True)
+    label_usb.show()
     button.add(label)
-    button.grab_focus()
+    #button.grab_focus()
+    button_usb.add(label_usb)
+    #button_usb.grab_focus()
     
     #Horizontal padding
     fillerhbox = gtk.HBox(False, 5)
     fillerhbox.set_size_request(-1,20)
     vbox.pack_start(fillerhbox, False, False)
     fillerhbox.show()
-
-    eject()
+    #Uncomment the following to eject the tray when a distro is selected
+    #eject()
     # close window after timeout passes
     gobject.timeout_add(CLOSEWINDOWTIMEOUT, window.destroy)
 

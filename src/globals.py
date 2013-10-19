@@ -1,6 +1,6 @@
+import os
 # width, height
 RESOLUTION = 1024,768
-
 # Directory containing the xml files describing the available isos.
 # (these can be symbolic links to another directory)
 HOMEDIR = '/home/kevin/freedomtoaster'
